@@ -1,322 +1,79 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<title>Satt Academy</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, sans-serif;
-}
-
-/* ===== BODY ===== */
-body{
-  background:#121a23;
-  color:#ffffff;
-}
-
-/* ===== HEADER ===== */
-header{
-  background:#2a2a2a;
-  padding:14px 16px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
-
-.left{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
-.menu{
-  font-size:24px;
-  cursor:pointer;
-  color:#22c55e;
-}
-
-.logo{
-  font-size:22px;
-  font-weight:bold;
-}
-
-.logo span{
-  color:#22c55e;
-}
-
-.right{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
-
-.icon{
-  font-size:20px;
-  cursor:pointer;
-}
-
-.signin{
-  background:#22c55e;
-  color:#000;
-  padding:6px 14px;
-  border-radius:6px;
-  text-decoration:none;
-  font-weight:bold;
-  font-size:14px;
-}
-
-/* ===== FEATURES SECTION ===== */
-.features{
-  <!-- ===== Secondary Books Section Start ===== -->
-<section class="features" id="secondary-books">
-
-  <h2 class="features-title">📘 মাধ্যমিক স্তরের বই (৬ষ্ঠ–১০ম শ্রেণি)</h2>
-
-  <div class="features-grid">
-
-    <div class="feature-card">
-      <h3>📚 মাধ্যমিক পাঠ্যবই</h3>
-      <p>
-        জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড (NCTB) কর্তৃক প্রকাশিত  
-        মাধ্যমিক স্তরের সকল পাঠ্যবই এখানে পাওয়া যাবে।
-      </p>
-
-      <a class="signin"
-         href="https://nctb.portal.gov.bd/site/page/07ed46a6-0a64-4b75-9bd1-135e45d586bc"
-         target="_blank">
-        👉 মাধ্যমিক বই দেখুন
-      </a>
-    </div>
-
-  </div>
-
-</section>
-<!-- ===== Secondary Books Section End ===== -->
-
-  padding:22px 14px;
-}
-
-.features-title{
-  text-align:center;
-  font-size:28px;
-  color:#22c55e;
-  margin-bottom:22px;
-  font-weight:bold;
-}
-
-/* GRID */
-.features-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-}
-
-.feature-card{
-  background:#1f2933;
-  border-radius:10px;
-  padding:18px 8px;
-  text-align:center;
-  position:relative;
-  box-shadow:0 4px 12px rgba(0,0,0,0.5);
-}
-
-.feature-card img{
-  width:48px;
-  margin-bottom:10px;
-}
-
-.feature-card p{
-  font-size:14px;
-}
-
-/* COLOR BORDERS */
-.green{border-left:4px solid #22c55e;}
-.lime{border-left:4px solid #84cc16;}
-.blue{border-left:4px solid #3b82f6;}
-.teal{border-left:4px solid #14b8a6;}
-.purple{border-left:4px solid #a855f7;}
-.cyan{border-left:4px solid #06b6d4;}
-.orange{border-left:4px solid #f97316;}
-.mint{border-left:4px solid #2dd4bf;}
-.red{border-left:4px solid #ef4444;}
-
-/* NEW BADGE */
-.badge{
-  position:absolute;
-  top:6px;
-  right:6px;
-  background:#16a34a;
-  color:#fff;
-  font-size:10px;
-  padding:2px 6px;
-  border-radius:10px;
-}
-
-/* MOBILE FIX */
-@media(max-width:480px){
-  .features-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Satt Academy</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- ===== Pre Primary Books Section ===== -->
-<section class="features">
-  <h2 class="features-title">📘 প্রাক-প্রাথমিক শ্রেণীর বই</h2>
 
-  <div class="features-grid">
-    <div class="feature-card">
-      <h3>প্রাক-প্রাথমিক পাঠ্যবই</h3>
-      <p>NCTB কর্তৃক প্রকাশিত প্রাক-প্রাথমিক শ্রেণীর বই</p>
-
-      <a class="signin"
-         href="https://nctb.portal.gov.bd/site/page/b9ec5307-47a0-4b72-8331-d28520af9d2f"
-         target="_blank">
-        📥 বই দেখুন
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- ===== HEADER ===== -->
-<header>
+<!-- ===== TOP BAR ===== -->
+<header class="topbar">
   <div class="left">
-    <div class="menu">☰</div>
-    <div class="logo"><span>Satt</span> Academy</div>
+    <span class="menu">☰</span>
+    <span class="logo">Satt <b>Academy</b></span>
   </div>
 
   <div class="right">
-    <div class="icon">🌙</div>
-    <div class="icon">🔍</div>
-    <a href="#" class="signin">Sign In</a>
+    <button class="icon">🌙</button>
+    <a href="search.html" class="icon">🔍</a>
+    <a href="signin.html" class="signin">Sign In</a>
   </div>
 </header>
 
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <h1>📱 প্রাক-প্রাথমিক শ্রেণীর বই</h1>
+
+  <div class="hero-card">
+    <h2>প্রাক-প্রাথমিক পাঠ্যবই</h2>
+    <p>NCTB কর্তৃক প্রকাশিত প্রাক-প্রাথমিক শ্রেণীর বই</p>
+    <a href="pre-primary.html" class="btn">📘 বই দেখুন</a>
+  </div>
+</section>
+
 <!-- ===== FEATURES ===== -->
 <section class="features">
-  <h2 class="features-title">শিক্ষা ফিচার্স</h2>
+  <h2 class="section-title">শিক্ষা ফিচারস</h2>
 
-  <div class="features-grid">
+  <div class="grid">
 
-    <div class="feature-card green">
-      <img src="https://img.icons8.com/color/96/online.png">
-      <p>টেক || প্রোগ্রামিং</p>
-      <span class="badge">New</span>
-    </div>
-
-    <div class="feature-card lime">
-      <img src="https://img.icons8.com/color/96/student-male.png">
-      <p>১ম–দ্বাদশ শ্রেণি</p>
-    </div>
-
-    <div class="feature-card blue">
-      <img src="https://img.icons8.com/color/96/school.png">
-      <p>ভর্তি প্রস্তুতি</p>
-    </div>
-
-    <div class="feature-card teal">
-      <img src="https://img.icons8.com/color/96/training.png">
-      <p>চাকরি প্রস্তুতি</p>
-    </div>
-
-    <div class="feature-card purple">
-      <img src="https://img.icons8.com/color/96/security-checked.png">
-      <p>পার্টনার হাব</p>
-      <span class="badge">New</span>
-    </div>
-
-    <div class="feature-card cyan">
-      <img src="https://img.icons8.com/color/96/video.png">
-      <p>কোর্স</p>
-    </div>
-
-    <div class="feature-card orange">
-      <img src="https://img.icons8.com/color/96/help.png">
-      <p>E-Question Builder</p>
-      <span class="badge">New</span>
-    </div>
-
-    <div class="feature-card mint">
-      <img src="https://img.icons8.com/color/96/test.png">
-      <p>এক্সাম বোর্ড</p>
-    </div>
-
-    <div class="feature-card red">
-      <img src="https://img.icons8.com/color/96/book.png">
-      <p>বই</p>
-    </div>
-
-  </div>
-</section>
-  <!-- ===== Education Features Section START ===== -->
-<section class="edu-features">
-  <h2 class="section-title">সার্চ ফিচার্স</h2>
-
-  <div class="features-grid">
-
-    <a href="#" class="feature-card yellow">
-      <span class="new-badge">New</span>
-      <img src="icons/tech.png" alt="">
-      <p>টেক || প্রোগ্রামিং</p>
+    <a href="tech.html" class="card green">
+      📡
+      <span>টেক প্রোগ্রামিং</span>
     </a>
 
-    <a href="#" class="feature-card green">
-      <img src="icons/class.png" alt="">
-      <p>১ম–দ্বাদশ শ্রেণি</p>
+    <a href="class.html" class="card lime">
+      🎓
+      <span>১ম–১২শ শ্রেণি</span>
     </a>
 
-    <a href="#" class="feature-card red">
-      <img src="icons/admission.png" alt="">
-      <p>ভর্তি প্রস্তুতি</p>
+    <a href="admission.html" class="card blue">
+      🏫
+      <span>ভর্তি প্রস্তুতি</span>
     </a>
 
-    <a href="#" class="feature-card lime">
-      <img src="icons/job.png" alt="">
-      <p>চাকরি প্রস্তুতি</p>
+    <a href="jobs.html" class="card teal">
+      💼
+      <span>চাকরির প্রস্তুতি</span>
     </a>
 
-    <a href="#" class="feature-card blue">
-      <span class="new-badge">New</span>
-      <img src="icons/partner.png" alt="">
-      <p>পার্টনার হাব</p>
+    <a href="premium.html" class="card purple">
+      🛡
+      <span>প্রিমিয়াম হাব</span>
     </a>
 
-    <a href="#" class="feature-card purple">
-      <img src="icons/course.png" alt="">
-      <p>কোর্স</p>
-    </a>
-
-    <a href="#" class="feature-card cyan">
-      <span class="new-badge">New</span>
-      <img src="icons/question.png" alt="">
-      <p>E-Question Builder</p>
-    </a>
-
-    <a href="#" class="feature-card olive">
-      <img src="icons/exam.png" alt="">
-      <p>এক্সাম বোর্ড</p>
-    </a>
-
-    <a href="#" class="feature-card teal">
-      <img src="icons/book.png" alt="">
-      <p>বই</p>
+    <a href="course.html" class="card cyan">
+      🎬
+      <span>কোর্স</span>
     </a>
 
   </div>
 </section>
-<!-- ===== Education Features Section END ===== -->
+
+<footer>
+  © 2025 Satt Academy
+</footer>
 
 </body>
 </html>
