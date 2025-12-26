@@ -6,17 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
 
-/* ===== THEME ===== */
 body{
   background:#0b1e33;
-  color:#fff;
-  transition:0.3s;
-}
-body.light{
-  background:#f5f7fb;
-  color:#000;
+  color:#ffffff;
 }
 
 /* ===== HEADER ===== */
@@ -26,19 +25,41 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  position:sticky;
-  top:0;
-  z-index:1000;
 }
-body.light header{background:#ffffff;color:#000}
 
-.left{display:flex;align-items:center;gap:12px}
-.menu{font-size:24px;cursor:pointer}
-.logo{font-size:22px;font-weight:bold}
-.logo span{color:#22c55e}
+/* LEFT */
+.left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
 
-.right{display:flex;align-items:center;gap:14px}
-.icon{font-size:20px;cursor:pointer}
+.menu{
+  font-size:24px;
+  cursor:pointer;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
+
+.logo span{
+  color:#22c55e;
+}
+
+/* RIGHT */
+.right{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.icon{
+  font-size:20px;
+  cursor:pointer;
+}
+
 .signin{
   background:#16a34a;
   color:#fff;
@@ -46,179 +67,25 @@ body.light header{background:#ffffff;color:#000}
   border-radius:6px;
   text-decoration:none;
   font-weight:bold;
-}
-
-/* ===== DRAWER ===== */
-.drawer{
-  position:fixed;
-  top:0;left:-260px;
-  width:250px;height:100%;
-  background:#0f2742;
-  padding:20px;
-  transition:0.3s;
-  z-index:2000;
-}
-.drawer.active{left:0}
-.drawer a{
-  display:block;
-  color:#fff;
-  text-decoration:none;
-  margin:15px 0;
-}
-body.light .drawer{background:#fff}
-body.light .drawer a{color:#000}
-
-/* ===== OVERLAY ===== */
-.overlay{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.6);
-  z-index:1500;
-}
-.overlay.active{display:block}
-
-/* ===== HERO ===== */
-.hero{text-align:center;padding:70px 15px}
-.hero h1{font-size:34px}
-.hero h2{margin-top:8px}
-.blue{color:#38bdf8}
-.green{color:#22c55e}
-
-/* ===== STATS ===== */
-.stats{
-  display:flex;
-  justify-content:space-around;
-  padding:30px 10px;
-  flex-wrap:wrap;
-}
-.stat{text-align:center;margin:10px}
-.stat h3{font-size:22px}
-
-/* ===== SEARCH MODAL ===== */
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.7);
-  z-index:3000;
-  align-items:center;
-  justify-content:center;
-}
-.modal.active{display:flex}
-.modal-box{
-  background:#fff;
-  padding:20px;
-  width:90%;
-  max-width:400px;
-  border-radius:8px;
-}
-.modal-box input{
-  width:100%;
-  padding:10px;
-  font-size:16px;
-}
-
-/* ===== LOGIN ===== */
-.login{
-  display:none;
-  padding:40px 20px;
-  text-align:center;
-}
-.login.active{display:block}
-.login input{
-  width:100%;
-  max-width:300px;
-  padding:10px;
-  margin:8px auto;
-  display:block;
-}
-.login button{
-  padding:10px 20px;
-  background:#16a34a;
-  color:#fff;
-  border:none;
-  cursor:pointer;
-  border-radius:6px;
+  font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- DRAWER -->
-<div class="drawer" id="drawer">
-  <a href="#">Home</a>
-  <a href="#">New Circular</a>
-  <a href="#">Categories</a>
-  <a href="#">Favourite</a>
-  <a href="#">Applied Jobs</a>
-  <a href="#">Preparation</a>
-</div>
-
-<div class="overlay" id="overlay"></div>
-
-<!-- HEADER -->
 <header>
   <div class="left">
-    <div class="menu" onclick="toggleDrawer()">☰</div>
+    <div class="menu">☰</div>
     <div class="logo"><span>Satt</span> Academy</div>
   </div>
+
   <div class="right">
-    <div class="icon" onclick="toggleTheme()">🌙</div>
-    <div class="icon" onclick="openSearch()">🔍</div>
-    <a href="#" class="signin" onclick="openLogin()">Sign In</a>
+    <div class="icon">🌙</div>
+    <div class="icon">🔍</div>
+    <a href="#" class="signin">Sign In</a>
   </div>
 </header>
-
-<!-- HERO -->
-<section class="hero">
-  <h1>Satt Academy</h1>
-  <h2><span class="blue">One Stop</span> <span class="green">Learning Platform</span></h2>
-</section>
-
-<!-- STATS -->
-<section class="stats">
-  <div class="stat"><h3>2M+</h3><p>Questions</p></div>
-  <div class="stat"><h3>6M+</h3><p>Students</p></div>
-  <div class="stat"><h3>100K+</h3><p>Contents</p></div>
-</section>
-
-<!-- SEARCH -->
-<div class="modal" id="searchModal">
-  <div class="modal-box">
-    <input type="text" placeholder="Search here...">
-  </div>
-</div>
-
-<!-- LOGIN -->
-<div class="login" id="login">
-  <h2>Login</h2>
-  <input type="email" placeholder="Email">
-  <input type="password" placeholder="Password">
-  <button>Login</button>
-</div>
-
-<script>
-function toggleDrawer(){
-  drawer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
-overlay.onclick=()=>toggleDrawer();
-
-function toggleTheme(){
-  document.body.classList.toggle("light");
-}
-
-function openSearch(){
-  searchModal.classList.add("active");
-}
-searchModal.onclick=()=>searchModal.classList.remove("active");
-
-function openLogin(){
-  login.classList.toggle("active");
-}
-</script>
 
 </body>
 </html>
