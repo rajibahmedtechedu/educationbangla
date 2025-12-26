@@ -17,7 +17,9 @@
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:#f4f6f8;
+background:#f4f6f8 url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/National_emblem_of_Bangladesh.svg/512px-National_emblem_of_Bangladesh.svg.png') no-repeat center;
+background-size:350px;
+background-attachment:fixed;
 line-height:1.6
 }
 
@@ -31,50 +33,77 @@ text-align:center
 nav{
 background:#ffd800;
 padding:12px;
-text-align:center
+display:flex;
+justify-content:center;
+gap:25px
 }
 
-nav a{
-margin:0 15px;
-text-decoration:none;
+.menu{
+position:relative;
 font-weight:bold;
-color:#000;
-font-size:16px
+cursor:pointer
 }
 
-nav a:hover{
-text-decoration:underline
+.menu a{
+text-decoration:none;
+color:#000
+}
+
+.dropdown{
+display:none;
+position:absolute;
+top:25px;
+left:0;
+background:#fff;
+border:1px solid #ccc;
+min-width:260px;
+z-index:10;
+box-shadow:0 4px 8px rgba(0,0,0,0.1)
+}
+
+.dropdown a{
+display:block;
+padding:10px;
+text-decoration:none;
+color:#006a4e;
+border-bottom:1px solid #eee
+}
+
+.dropdown a:hover{
+background:#e9f5f1
+}
+
+.menu:hover .dropdown{
+display:block
+}
+
+.marquee{
+background:#222;
+color:#fff;
+padding:10px;
+font-weight:bold
 }
 
 .container{
 max-width:1000px;
-margin:auto;
-background:#fff;
-padding:20px
+margin:20px auto;
+background:rgba(255,255,255,0.95);
+padding:25px
 }
 
-h1{
+h1,h2{
 color:#006a4e
-}
-
-h2{
-color:#006a4e;
-margin-top:30px
 }
 
 .job-links a{
 display:block;
 padding:10px;
-margin:8px 0;
+margin:10px 0;
 background:#e9f5f1;
 text-decoration:none;
 color:#006a4e;
 font-weight:bold;
 border-left:5px solid #006a4e
-}
-
-.job-links a:hover{
-background:#d4efe6
 }
 
 footer{
@@ -96,12 +125,53 @@ font-size:14px
 <p>Latest Government, Private, Bank & NGO Job Circular in Bangladesh</p>
 </header>
 
+<!-- MENU WITH HOVER PREVIEW -->
 <nav>
+
+<div class="menu">
 <a href="https://bdgovt.info/category/govt-job/" target="_blank">Govt Jobs</a>
+<div class="dropdown">
+<a href="#">🔔 Ministry Job Circular</a>
+<a href="#">🔔 Govt School & College Jobs</a>
+<a href="#">🔔 Public Service Jobs</a>
+</div>
+</div>
+
+<div class="menu">
 <a href="https://bdgovt.info/category/private-job/" target="_blank">Private Jobs</a>
+<div class="dropdown">
+<a href="#">🏢 Company Job Circular</a>
+<a href="#">🏢 Factory & Office Jobs</a>
+<a href="#">🏢 IT & Corporate Jobs</a>
+</div>
+</div>
+
+<div class="menu">
 <a href="https://bdgovt.info/category/bank-job/" target="_blank">Bank Jobs</a>
+<div class="dropdown">
+<a href="#">🏦 Govt Bank Jobs</a>
+<a href="#">🏦 Private Bank Jobs</a>
+<a href="#">🏦 Financial Institute Jobs</a>
+</div>
+</div>
+
+<div class="menu">
 <a href="https://bdgovt.info/category/ngo-job/" target="_blank">NGO Jobs</a>
+<div class="dropdown">
+<a href="#">🌍 NGO Development Jobs</a>
+<a href="#">🌍 Project Based Jobs</a>
+<a href="#">🌍 Field Officer Jobs</a>
+</div>
+</div>
+
 </nav>
+
+<!-- LIVE HEADLINE -->
+<div class="marquee">
+<marquee behavior="scroll" direction="left">
+🔥 Latest BD Job Circular News | Government | Private | Bank | NGO | Updated Daily
+</marquee>
+</div>
 
 <div class="container">
 
@@ -111,35 +181,21 @@ font-size:14px
 <strong>BD Job Circular News</strong> is one of the best Bangladesh job websites.
 We publish daily updated government job circulars, private company jobs,
 bank job circular news and NGO job opportunities in Bangladesh.
-Our goal is to provide trusted and fast job information for job seekers.
 </p>
 
 <div class="job-links">
-<a href="https://bdgovt.info/category/govt-job/" target="_blank">
-👉 Latest Government Job Circular BD
-</a>
-
-<a href="https://bdgovt.info/category/private-job/" target="_blank">
-👉 Latest Private Job Circular Bangladesh
-</a>
-
-<a href="https://bdgovt.info/category/bank-job/" target="_blank">
-👉 Latest Bank Job Circular BD
-</a>
-
-<a href="https://bdgovt.info/category/ngo-job/" target="_blank">
-👉 Latest NGO Job Circular Bangladesh
-</a>
+<a href="https://bdgovt.info/category/govt-job/" target="_blank">👉 Government Job Circular BD</a>
+<a href="https://bdgovt.info/category/private-job/" target="_blank">👉 Private Job Circular Bangladesh</a>
+<a href="https://bdgovt.info/category/bank-job/" target="_blank">👉 Bank Job Circular BD</a>
+<a href="https://bdgovt.info/category/ngo-job/" target="_blank">👉 NGO Job Circular Bangladesh</a>
 </div>
 
-<h2>Why Choose BD Job Circular News?</h2>
-
+<h2>Why BD Job Circular News?</h2>
 <ul>
-<li>✔ Daily updated job circular news</li>
-<li>✔ Trusted Bangladesh job information</li>
-<li>✔ Govt, Private, Bank & NGO jobs</li>
-<li>✔ Mobile friendly & fast loading</li>
-<li>✔ Easy to use for all job seekers</li>
+<li>✔ Daily updated job circular</li>
+<li>✔ Trusted Bangladesh job source</li>
+<li>✔ Mobile friendly & fast</li>
+<li>✔ Easy navigation with live preview</li>
 </ul>
 
 </div>
