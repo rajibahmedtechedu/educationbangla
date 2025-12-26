@@ -1,108 +1,122 @@
-/* ===== RESET ===== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hind Siliguri', sans-serif;
 }
 
 body {
-  background: #f3f6fb;
-  font-family: Arial, sans-serif;
-  color: #222;
+    background: #0b1c2d;
+    color: white;
 }
 
-/* ===== HEADER ===== */
-.top {
-  text-align: center;
-  padding: 30px 10px;
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #081421;
 }
 
-.top h1 {
-  font-size: 32px;
-  color: #1a8f2f;
-  border-bottom: 3px solid #1a8f2f;
-  display: inline-block;
-  padding-bottom: 6px;
+.navbar .logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #00ff9d;
 }
 
-/* ===== FEATURES ===== */
-.features {
-  padding: 40px;
+.navbar nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
 }
 
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 22px;
+.navbar nav a:hover {
+    color: #00ff9d;
 }
 
-/* ===== CARD ===== */
-.feature-card {
-  background: #fff;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  padding: 22px;
-  text-decoration: none;
-  color: inherit;
-  position: relative;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: 0.3s;
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
 }
 
-.feature-card:hover {
-  transform: translateY(-6px);
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
 }
 
-/* ===== ICON ===== */
-.icon {
-  font-size: 34px;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  margin-right: 16px;
-  color: #fff;
+.hero p {
+    font-size: 18px;
+    color: #9ecbff;
 }
 
-/* ===== TEXT ===== */
-.text h3 {
-  font-size: 18px;
-  margin-bottom: 4px;
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 60px;
 }
 
-.text p {
-  font-size: 13px;
-  color: #555;
+.stat h2 {
+    font-size: 32px;
+    color: #00ff9d;
 }
 
-/* ===== BADGE ===== */
-.badge {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background: red;
-  color: #fff;
-  font-size: 11px;
-  padding: 4px 8px;
-  border-radius: 20px;
+.stat span {
+    font-size: 14px;
+    color: #cfdfff;
 }
 
-/* ===== COLORS ===== */
-.purple { background: #8e44ad; }
-.green { background: #27ae60; }
-.orange { background: #e67e22; }
-.blue { background: #3498db; }
-.darkgreen { background: #16a085; }
-.sky { background: #1abc9c; }
-.gray { background: #7f8c8d; }
-.red { background: #e74c3c; }
+/* ===== CARDS ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 80px 60px;
+}
+
+.card {
+    background: linear-gradient(145deg, #0f2a44, #081a2b);
+    padding: 35px;
+    text-align: center;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background: #00ff9d;
+    color: #081421;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 25px;
+    background: #081421;
+    font-size: 14px;
+    color: #9ecbff;
+}
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-  .features {
-    padding: 20px;
-  }
+@media (max-width: 768px) {
+    .stats {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
