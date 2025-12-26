@@ -128,3 +128,71 @@ body{
 .sky-bg{background:linear-gradient(135deg,#64b5f6,#1e88e5);}
 .gray-bg{background:linear-gradient(135deg,#78909c,#455a64);}
 .red-bg{background:linear-gradient(135deg,#f44336,#b71c1c);}
+/* ===== Education Features Section ===== */
+.edu-features {
+  padding: 30px 15px;
+  background: #1f2428;
+}
+
+.section-title {
+  text-align: center;
+  color: #2ecc71;
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.feature-card {
+  position: relative;
+  background: #2a2f34;
+  border-radius: 10px;
+  padding: 20px 10px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  border-left: 4px solid;
+}
+
+.feature-card img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 15px;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  background: #30363d;
+}
+
+/* Color Variants */
+.yellow { border-color: #f1c40f; }
+.green { border-color: #2ecc71; }
+.red { border-color: #e74c3c; }
+.lime { border-color: #9acd32; }
+.blue { border-color: #3498db; }
+.purple { border-color: #9b59b6; }
+.cyan { border-color: #1abc9c; }
+.olive { border-color: #a3cb38; }
+.teal { border-color: #00cec9; }
+
+/* New Badge */
+.new-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 7px;
+  border-radius: 20px;
+}
