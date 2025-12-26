@@ -1,198 +1,49 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: "Segoe UI", sans-serif;
+/* পুরো পেজ সেন্টার করার জন্য */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f2f2f2;
+  font-family: Arial, sans-serif;
 }
 
-body{
-  background:#f4f7fb;
+/* সার্চ বক্স ডিজাইন */
+.search-box {
+  display: flex;
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Section */
-.smart-section{
-  padding:60px 8%;
+/* ইনপুট ফিল্ড */
+.search-box input {
+  width: 220px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+
+  color: #000000;          /* ✅ টাইপ করা লেখার রং */
+  outline: none;
 }
 
-/* Title */
-.section-title{
-  text-align:center;
-  font-size:38px;
-  color:#1fa31f;
-  margin-bottom:50px;
-  position:relative;
+/* placeholder লেখার রং */
+.search-box input::placeholder {
+  color: #888888;          /* ✅ আগের লেখা (placeholder) রং */
 }
 
-.section-title::after{
-  content:"";
-  width:140px;
-  height:4px;
-  background:linear-gradient(to right,#1fa31f,#66ff66);
-  display:block;
-  margin:12px auto 0;
-  border-radius:20px;
+/* বাটন */
+.search-box button {
+  padding: 10px 15px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  border-radius: 4px;
 }
 
-/* Grid */
-.feature-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:28px;
-}
-
-/* Card */
-.feature-card{
-  background:#fff;
-  display:flex;
-  align-items:center;
-  padding:22px 25px;
-  border-radius:14px;
-  position:relative;
-  box-shadow:0 12px 30px rgba(0,0,0,.08);
-  transition:.4s cubic-bezier(.4,0,.2,1);
-  overflow:hidden;
-}
-
-.feature-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(120deg,transparent,rgba(0,0,0,.04),transparent);
-  opacity:0;
-  transition:.4s;
-}
-
-.feature-card:hover{
-  transform:translateY(-10px) scale(1.02);
-  box-shadow:0 20px 40px rgba(0,0,0,.15);
-}
-
-.feature-card:hover::before{
-  opacity:1;
-}
-
-/* Icon */
-.icon{
-  width:64px;
-  height:64px;
-  border-radius:16px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:30px;
-  color:#fff;
-  margin-right:20px;
-  flex-shrink:0;
-}
-
-/* Text */
-.content h3{
-  font-size:19px;
-  margin-bottom:6px;
-}
-
-.content p{
-  font-size:14px;
-  color:#666;
-}
-
-/* Badge */
-.badge{
-  position:absolute;
-  top:-10px;
-  right:-10px;
-  background:linear-gradient(to right,#ff3d00,#ff9800);
-  color:#fff;
-  font-size:12px;
-  padding:5px 9px;
-  border-radius:50%;
-  box-shadow:0 6px 15px rgba(0,0,0,.2);
-}
-
-/* Left Border */
-.purple{border-left:6px solid #8e24aa;}
-.green{border-left:6px solid #2e7d32;}
-.orange{border-left:6px solid #ef6c00;}
-.darkgreen{border-left:6px solid #0b7d2c;}
-.blue{border-left:6px solid #1e88e5;}
-.sky{border-left:6px solid #42a5f5;}
-.gray{border-left:6px solid #607d8b;}
-.red{border-left:6px solid #e53935;}
-
-/* Icon Colors */
-.purple-bg{background:linear-gradient(135deg,#9c27b0,#6a1b9a);}
-.green-bg{background:linear-gradient(135deg,#43a047,#1b5e20);}
-.orange-bg{background:linear-gradient(135deg,#ff9800,#ef6c00);}
-.darkgreen-bg{background:linear-gradient(135deg,#1b5e20,#0b7d2c);}
-.blue-bg{background:linear-gradient(135deg,#2196f3,#1565c0);}
-.sky-bg{background:linear-gradient(135deg,#64b5f6,#1e88e5);}
-.gray-bg{background:linear-gradient(135deg,#78909c,#455a64);}
-.red-bg{background:linear-gradient(135deg,#f44336,#b71c1c);}
-/* ===== Education Features Section ===== */
-.edu-features {
-  padding: 30px 15px;
-  background: #1f2428;
-}
-
-.section-title {
-  text-align: center;
-  color: #2ecc71;
-  font-size: 28px;
-  margin-bottom: 25px;
-  font-weight: bold;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 15px;
-}
-
-.feature-card {
-  position: relative;
-  background: #2a2f34;
-  border-radius: 10px;
-  padding: 20px 10px;
-  text-align: center;
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-  border-left: 4px solid;
-}
-
-.feature-card img {
-  width: 50px;
-  margin-bottom: 10px;
-}
-
-.feature-card p {
-  font-size: 15px;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-  background: #30363d;
-}
-
-/* Color Variants */
-.yellow { border-color: #f1c40f; }
-.green { border-color: #2ecc71; }
-.red { border-color: #e74c3c; }
-.lime { border-color: #9acd32; }
-.blue { border-color: #3498db; }
-.purple { border-color: #9b59b6; }
-.cyan { border-color: #1abc9c; }
-.olive { border-color: #a3cb38; }
-.teal { border-color: #00cec9; }
-
-/* New Badge */
-.new-badge {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background: #e74c3c;
-  color: #fff;
-  font-size: 11px;
-  padding: 3px 7px;
-  border-radius: 20px;
+.search-box button:hover {
+  background: #084298;
 }
