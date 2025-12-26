@@ -1,60 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- SEO Title -->
   <title>Bangladesh Job Circular 2025 | Govt, Bank, Private Jobs</title>
 
-<meta name="description" content="Bangladesh Job Circular 2025 – Latest Government, Bank, NGO, IT and Private Job Information Website">
+  <!-- SEO Description -->
+  <meta name="description" content="Bangladesh Job Circular 2025 – Latest Government, Bank, NGO, IT and Private Job Information Website">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Keywords -->
+  <meta name="keywords" content="Bangladesh job circular, govt job, private job, bank job, NGO job, IT job">
 
-  <title>Bangladesh Job Circular 2025 | Govt, Bank, Private Jobs</title>
+  <!-- Mobile Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Bangladesh Job Circular 2025 – Latest Government, Bank, NGO, IT and Private Job News">
-
-<meta name="keywords" content="Bangladesh job circular, govt job, private job, bank job">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Bangladesh Job Circular 2025 | Govt & Private Jobs</title>
-  <meta name="description" content="Latest Bangladesh Government and Private Job Circular Website">
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-  <h1>🇧🇩 Bangladesh Job Circular</h1>
-  <p>Govt | Private | Bank | NGO | IT Jobs</p>
-</header>
+  <!-- Header -->
+  <header>
+    <h1>🇧🇩 Bangladesh Job Circular</h1>
+    <p>Govt | Private | Bank | NGO | IT Jobs</p>
+  </header>
 
-<nav>
-  <section class="search-box">
-  <input type="text" id="jobSearch" placeholder="Search jobs (Govt, Bank, IT...)">
-</section>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="jobs/govt.html">Govt Jobs</a>
+    <a href="jobs/private.html">Private Jobs</a>
+    <a href="jobs/bank.html">Bank Jobs</a>
+    <a href="jobs/ngo.html">NGO Jobs</a>
+    <a href="jobs/it.html">IT Jobs</a>
+    <a href="jobs/result.html">Result</a>
+    <a href="jobs/admit.html">Admit</a>
+    <a href="jobs/preparation.html">Preparation</a>
+  </nav>
+
+  <!-- Breaking News -->
   <section class="breaking">
-  <marquee>
-    🔔 Latest Jobs: Primary Teacher | Sonali Bank | Walton | NGO Jobs | IT Jobs – Apply Now
-  </marquee>
-</section>
-  <a href="index.html">Home</a>
-  <a href="jobs/govt.html">Govt Jobs</a>
-  <a href="jobs/private.html">Private Jobs</a>
-  <a href="jobs/bank.html">Bank Jobs</a>
-  <a href="jobs/ngo.html">NGO Jobs</a>
-  <a href="jobs/it.html">IT Jobs</a>
-</nav>
+    <marquee>
+      🔔 Latest Jobs: Primary Teacher | Sonali Bank | Walton | NGO Jobs | IT Jobs – Apply Now
+    </marquee>
+  </section>
 
-<section class="card">
-  <h2>🔥 Latest Job Circular</h2>
-  <ul>
-    <li><a href="jobs/govt.html">Primary Teacher Job Circular 2025</a></li>
-    <li><a href="jobs/bank.html">Sonali Bank Job Circular</a></li>
-    <li><a href="jobs/private.html">Walton Group Job Circular</a></li>
-  </ul>
-</section>
+  <!-- Search Box -->
+  <section class="search-box">
+    <input type="text" id="jobSearch" placeholder="Search jobs (Govt, Bank, IT...)">
+  </section>
 
-<footer>
-  <p>© 2025 Bangladesh Job Circular | Developed by Rajib Ahmed</p>
-</footer>
+  <!-- Job List -->
+  <section class="card">
+    <h2>🔥 Latest Job Circular</h2>
+    <ul id="jobList">
+      <li>Government – Primary Teacher Job Circular 2025</li>
+      <li>Bank – Sonali Bank Job Circular</li>
+      <li>Private – Walton Group Job Circular</li>
+      <li>NGO – BRAC Job Circular</li>
+      <li>IT – Software Engineer Job</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Bangladesh Job Circular | Developed by Rajib Ahmed</p>
+  </footer>
+
+  <!-- Search Script -->
+  <script>
+    document.getElementById("jobSearch").addEventListener("keyup", function () {
+      let filter = this.value.toLowerCase();
+      let jobs = document.querySelectorAll("#jobList li");
+
+      jobs.forEach(function (job) {
+        let text = job.textContent.toLowerCase();
+        job.style.display = text.includes(filter) ? "" : "none";
+      });
+    });
+  </script>
 
 </body>
 </html>
