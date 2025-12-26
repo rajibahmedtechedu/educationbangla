@@ -4,57 +4,50 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BD Job Circular News | Latest Jobs Bangladesh</title>
+<title>BD Job Circular News | Jobs & Preparation Bangladesh</title>
 
-<meta name="description" content="BD Job Circular News – Latest Bangladesh Government, Private & NGO Job Circular Updates.">
-<meta name="keywords" content="bd job circular news, govt job bd, private job bd, ngo job bd">
+<meta name="description" content="BD Job Circular News – Latest Government, Private, NGO Jobs with Question Bank, MCQ Solution & Preparation Guide.">
+<meta name="keywords" content="bd job circular news, govt job preparation, bank job question, ngo job question, job mcq bangladesh">
 <meta name="google-site-verification" content="google90284e4798abd4a3">
 
 <style>
 *{box-sizing:border-box}
 body{
     margin:0;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family:Segoe UI, Arial;
     background:#0a0f1c;
     color:#fff;
-    overflow-x:hidden;
 }
 
-/* 🔹 Background Government Logo */
+/* Background Logo */
 body::before{
     content:"";
     position:fixed;
     inset:0;
-    background:url("https://upload.wikimedia.org/wikipedia/commons/5/55/Government_Seal_of_Bangladesh.svg")
-    no-repeat center;
+    background:url("https://upload.wikimedia.org/wikipedia/commons/5/55/Government_Seal_of_Bangladesh.svg") no-repeat center;
     background-size:350px;
-    opacity:0.06;
+    opacity:0.05;
     z-index:-1;
-    filter:blur(1px);
 }
 
-/* 🔹 Header */
+/* Header */
 header{
     text-align:center;
     padding:70px 20px 40px;
 }
 header h1{
     font-size:42px;
-    margin:0;
-    animation:fadeUp 1.5s ease;
 }
 header p{
     opacity:.85;
-    font-size:18px;
-    animation:fadeUp 2s ease;
 }
 
-/* 🔹 Moving News Ticker */
+/* Ticker */
 .ticker{
     background:linear-gradient(90deg,#0b5ed7,#6610f2);
+    padding:12px 0;
     overflow:hidden;
     white-space:nowrap;
-    padding:12px 0;
 }
 .ticker span{
     display:inline-block;
@@ -67,83 +60,49 @@ header p{
     100%{transform:translateX(-100%)}
 }
 
-/* 🔹 Menu */
-.menu{
+/* Cards */
+.section{
+    padding:70px 20px;
+    text-align:center;
+}
+.section h2{
+    margin-bottom:40px;
+}
+.cards{
     display:flex;
     justify-content:center;
-    gap:30px;
-    margin:80px 0;
+    gap:25px;
     flex-wrap:wrap;
 }
-
 .card{
     width:260px;
     padding:25px;
-    background:rgba(255,255,255,.05);
+    background:rgba(255,255,255,.06);
     border-radius:15px;
-    text-align:center;
-    position:relative;
     backdrop-filter:blur(10px);
     box-shadow:0 20px 40px rgba(0,0,0,.4);
     transition:.4s;
-    cursor:pointer;
-    animation:fadeUp 2.5s ease;
 }
 .card:hover{
     transform:translateY(-10px) scale(1.03);
-    background:rgba(255,255,255,.1);
+    background:rgba(255,255,255,.12);
 }
-
-.card h2{
-    margin:0;
-    font-size:24px;
-}
-
-/* 🔹 Hover Details */
-.details{
-    position:absolute;
-    left:50%;
-    top:110%;
-    transform:translateX(-50%);
-    width:260px;
-    background:#111;
-    padding:20px;
-    border-radius:15px;
-    opacity:0;
-    pointer-events:none;
-    transition:.4s;
-    box-shadow:0 20px 40px rgba(0,0,0,.6);
-}
-.card:hover .details{
-    opacity:1;
-    top:105%;
-    pointer-events:auto;
-}
-
-.details a{
+.card a{
     color:#0d6efd;
     text-decoration:none;
     font-weight:bold;
 }
 
-/* 🔹 Footer */
+/* Footer */
 footer{
-    text-align:center;
-    padding:30px 15px;
     background:#060a14;
+    text-align:center;
+    padding:30px;
     font-size:14px;
-    opacity:.8;
 }
 footer a{
     color:#fff;
     text-decoration:none;
-    margin:0 5px;
-}
-
-/* 🔹 Animations */
-@keyframes fadeUp{
-    from{opacity:0; transform:translateY(40px)}
-    to{opacity:1; transform:translateY(0)}
 }
 </style>
 </head>
@@ -152,39 +111,48 @@ footer a{
 
 <header>
     <h1>BD Job Circular News</h1>
-    <p>Government • Private • NGO Jobs in Bangladesh</p>
+    <p>Jobs + Preparation Platform for Bangladesh</p>
 </header>
 
 <div class="ticker">
-    <span>🔥 সর্বশেষ চাকরির বিজ্ঞপ্তি চলমান — সরকারি, বেসরকারি, ব্যাংক ও এনজিও নিয়োগ আপডেট এখনই দেখুন 🔥</span>
+<span>🔥 সর্বশেষ চাকরির বিজ্ঞপ্তি ও নতুন প্রশ্ন সমাধান আপডেট চলছে 🔥</span>
 </div>
 
-<div class="menu">
+<!-- Job Section -->
+<div class="section">
+<h2>চাকরির বিজ্ঞপ্তি</h2>
+<div class="cards">
+    <div class="card"><h3>সরকারি চাকরি</h3><a href="https://bdgovt.info/category/govt-job/" target="_blank">দেখুন →</a></div>
+    <div class="card"><h3>বেসরকারি চাকরি</h3><a href="https://bdgovt.info/category/private-job/" target="_blank">দেখুন →</a></div>
+    <div class="card"><h3>এনজিও চাকরি</h3><a href="https://bdgovt.info/category/ngo-job/" target="_blank">দেখুন →</a></div>
+</div>
+</div>
 
+<!-- Preparation Section -->
+<div class="section">
+<h2>চাকরি প্রস্তুতি</h2>
+<div class="cards">
     <div class="card">
-        <h2>সরকারি চাকরি</h2>
-        <div class="details">
-            চলমান সরকারি নিয়োগ বিজ্ঞপ্তি<br><br>
-            <a href="https://bdgovt.info/category/govt-job/" target="_blank">সব দেখুন →</a>
-        </div>
+        <h3>নতুন প্রশ্ন সমাধান</h3>
+        <p>সাম্প্রতিক MCQ ও লিখিত প্রশ্ন</p>
+        <a href="#">শুরু করুন →</a>
     </div>
-
     <div class="card">
-        <h2>বেসরকারি চাকরি</h2>
-        <div class="details">
-            নতুন প্রাইভেট কোম্পানির চাকরি<br><br>
-            <a href="https://bdgovt.info/category/private-job/" target="_blank">সব দেখুন →</a>
-        </div>
+        <h3>প্রশ্নব্যাংক</h3>
+        <p>BCS, Bank, Govt Question Bank</p>
+        <a href="#">দেখুন →</a>
     </div>
-
     <div class="card">
-        <h2>এনজিও চাকরি</h2>
-        <div class="details">
-            দেশি ও আন্তর্জাতিক NGO নিয়োগ<br><br>
-            <a href="https://bdgovt.info/category/ngo-job/" target="_blank">সব দেখুন →</a>
-        </div>
+        <h3>মডেল টেস্ট</h3>
+        <p>পরীক্ষার আগে নিজেকে যাচাই করুন</p>
+        <a href="#">চেষ্টা করুন →</a>
     </div>
-
+    <div class="card">
+        <h3>প্রস্তুতি গাইড</h3>
+        <p>কিভাবে পড়বেন, কী পড়বেন</p>
+        <a href="#">গাইড দেখুন →</a>
+    </div>
+</div>
 </div>
 
 <footer>
