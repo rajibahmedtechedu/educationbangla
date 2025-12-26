@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <title>Satt Academy</title>
@@ -10,24 +11,27 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial,sans-serif;
+  font-family: Arial, sans-serif;
 }
 
+/* ===== BODY ===== */
 body{
-  background:#0b1e33;
+  background:#121a23;
   color:#ffffff;
 }
 
 /* ===== HEADER ===== */
 header{
-  background:#0f2742;
+  background:#2a2a2a;
   padding:14px 16px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-/* LEFT */
 .left{
   display:flex;
   align-items:center;
@@ -37,6 +41,7 @@ header{
 .menu{
   font-size:24px;
   cursor:pointer;
+  color:#22c55e;
 }
 
 .logo{
@@ -48,7 +53,6 @@ header{
   color:#22c55e;
 }
 
-/* RIGHT */
 .right{
   display:flex;
   align-items:center;
@@ -61,19 +65,88 @@ header{
 }
 
 .signin{
-  background:#16a34a;
-  color:#fff;
+  background:#22c55e;
+  color:#000;
   padding:6px 14px;
   border-radius:6px;
   text-decoration:none;
   font-weight:bold;
   font-size:14px;
 }
+
+/* ===== FEATURES SECTION ===== */
+.features{
+  padding:22px 14px;
+}
+
+.features-title{
+  text-align:center;
+  font-size:28px;
+  color:#22c55e;
+  margin-bottom:22px;
+  font-weight:bold;
+}
+
+/* GRID */
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.feature-card{
+  background:#1f2933;
+  border-radius:10px;
+  padding:18px 8px;
+  text-align:center;
+  position:relative;
+  box-shadow:0 4px 12px rgba(0,0,0,0.5);
+}
+
+.feature-card img{
+  width:48px;
+  margin-bottom:10px;
+}
+
+.feature-card p{
+  font-size:14px;
+}
+
+/* COLOR BORDERS */
+.green{border-left:4px solid #22c55e;}
+.lime{border-left:4px solid #84cc16;}
+.blue{border-left:4px solid #3b82f6;}
+.teal{border-left:4px solid #14b8a6;}
+.purple{border-left:4px solid #a855f7;}
+.cyan{border-left:4px solid #06b6d4;}
+.orange{border-left:4px solid #f97316;}
+.mint{border-left:4px solid #2dd4bf;}
+.red{border-left:4px solid #ef4444;}
+
+/* NEW BADGE */
+.badge{
+  position:absolute;
+  top:6px;
+  right:6px;
+  background:#16a34a;
+  color:#fff;
+  font-size:10px;
+  padding:2px 6px;
+  border-radius:10px;
+}
+
+/* MOBILE FIX */
+@media(max-width:480px){
+  .features-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
 </style>
 </head>
 
 <body>
 
+<!-- ===== HEADER ===== -->
 <header>
   <div class="left">
     <div class="menu">☰</div>
@@ -86,6 +159,63 @@ header{
     <a href="#" class="signin">Sign In</a>
   </div>
 </header>
+
+<!-- ===== FEATURES ===== -->
+<section class="features">
+  <h2 class="features-title">শিক্ষা ফিচার্স</h2>
+
+  <div class="features-grid">
+
+    <div class="feature-card green">
+      <img src="https://img.icons8.com/color/96/online.png">
+      <p>টেক || প্রোগ্রামিং</p>
+      <span class="badge">New</span>
+    </div>
+
+    <div class="feature-card lime">
+      <img src="https://img.icons8.com/color/96/student-male.png">
+      <p>১ম–দ্বাদশ শ্রেণি</p>
+    </div>
+
+    <div class="feature-card blue">
+      <img src="https://img.icons8.com/color/96/school.png">
+      <p>ভর্তি প্রস্তুতি</p>
+    </div>
+
+    <div class="feature-card teal">
+      <img src="https://img.icons8.com/color/96/training.png">
+      <p>চাকরি প্রস্তুতি</p>
+    </div>
+
+    <div class="feature-card purple">
+      <img src="https://img.icons8.com/color/96/security-checked.png">
+      <p>পার্টনার হাব</p>
+      <span class="badge">New</span>
+    </div>
+
+    <div class="feature-card cyan">
+      <img src="https://img.icons8.com/color/96/video.png">
+      <p>কোর্স</p>
+    </div>
+
+    <div class="feature-card orange">
+      <img src="https://img.icons8.com/color/96/help.png">
+      <p>E-Question Builder</p>
+      <span class="badge">New</span>
+    </div>
+
+    <div class="feature-card mint">
+      <img src="https://img.icons8.com/color/96/test.png">
+      <p>এক্সাম বোর্ড</p>
+    </div>
+
+    <div class="feature-card red">
+      <img src="https://img.icons8.com/color/96/book.png">
+      <p>বই</p>
+    </div>
+
+  </div>
+</section>
 
 </body>
 </html>
