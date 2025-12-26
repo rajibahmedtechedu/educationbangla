@@ -2,64 +2,153 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<title>বই ও PDF | জব প্রস্তুতি একাডেমি</title>
+<title>NCTB বই | Satt Academy</title>
 
-<meta name="description" content="ফ্রি বই ও PDF ডাউনলোড – চাকরি ও একাডেমিক">
-<meta name="keywords" content="PDF Book, Job Book, Academic Book">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:#fff;
+}
 
-<link rel="stylesheet" href="style.css">
+/* Header */
+.header{
+    padding:25px;
+    text-align:center;
+    background:rgba(0,0,0,0.4);
+    box-shadow:0 4px 20px rgba(0,255,150,0.3);
+}
+
+.header h1{
+    margin:0;
+    font-size:28px;
+    color:#00ff99;
+}
+
+/* Container */
+.container{
+    max-width:1100px;
+    margin:40px auto;
+    padding:20px;
+}
+
+/* Section Title */
+.section-title{
+    text-align:center;
+    font-size:26px;
+    color:#00ffcc;
+    margin-bottom:30px;
+}
+
+/* Button Grid */
+.button-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+/* Card Button */
+.card{
+    background:rgba(255,255,255,0.06);
+    border-radius:15px;
+    padding:30px 20px;
+    text-align:center;
+    cursor:pointer;
+    transition:0.3s;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 0 15px rgba(0,255,150,0.2);
+}
+
+.card:hover{
+    transform:translateY(-6px) scale(1.02);
+    box-shadow:0 0 25px rgba(0,255,200,0.7);
+}
+
+/* Glow Border */
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:15px;
+    padding:2px;
+    background:linear-gradient(135deg,#00ffcc,#00ff66,#00ccff);
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+}
+
+/* Icon */
+.icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+/* Text */
+.card h2{
+    margin:0;
+    font-size:22px;
+    color:#ffffff;
+}
+
+.card p{
+    margin-top:8px;
+    color:#b8fce4;
+    font-size:15px;
+}
+
+/* Footer */
+.footer{
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+    color:#aaa;
+    font-size:14px;
+}
+</style>
 </head>
 
 <body>
 
-<header class="navbar">
-  <div class="logo">জব প্রস্তুতি একাডেমি</div>
-  <nav>
-    <a href="index.html">হোম</a>
-    <a href="job.html">চাকরি</a>
-    <a href="book.html">বই</a>
-  </nav>
-</header>
+<div class="header">
+    <h1>📚 NCTB পাঠ্যবই | Satt Academy</h1>
+</div>
 
-<section class="hero">
-  <h1>বই ও PDF</h1>
-  <p>এক জায়গায় সব দরকারি বই</p>
-</section>
+<div class="container">
 
-<section class="cards">
+    <div class="section-title">শ্রেণিভিত্তিক বই নির্বাচন করুন</div>
 
-  <div class="card">
-    📘 সাধারণ জ্ঞান PDF  
-    <br><small>ডাউনলোড</small>
-  </div>
+    <div class="button-grid">
 
-  <div class="card">
-    📗 গণিত বই  
-    <br><small>ফ্রি</small>
-  </div>
+        <!-- Primary -->
+        <div class="card" onclick="openLink('https://nctb.portal.gov.bd/site/page/d01e72b0-8ecd-4c81-bffd-c9e117b7fdad')">
+            <div class="icon">🧒</div>
+            <h2>১ম – ৫ম শ্রেণি</h2>
+            <p>প্রাথমিক স্তরের সকল NCTB বই</p>
+        </div>
 
-  <div class="card">
-    📕 ইংরেজি গ্রামার  
-    <br><small>PDF</small>
-  </div>
+        <!-- Secondary -->
+        <div class="card" onclick="openLink('https://nctb.portal.gov.bd/site/page/07ed46a6-0a64-4b75-9bd1-135e45d586bc')">
+            <div class="icon">🎓</div>
+            <h2>৬ষ্ঠ – ১০ম শ্রেণি</h2>
+            <p>মাধ্যমিক স্তরের সকল NCTB বই</p>
+        </div>
 
-  <div class="card">
-    📙 BCS সহায়ক বই  
-    <br><small>আপডেট</small>
-  </div>
+    </div>
+</div>
 
-</section>
+<div class="footer">
+    © 2025 Satt Academy | Free Educational Resources
+</div>
 
-<section style="padding:40px; text-align:center;">
-  <div style="background:#ddd; padding:30px; color:#000;">
-    Ad Space (728x90)
-  </div>
-</section>
-
-<footer class="footer">
-  © 2025 জব প্রস্তুতি একাডেমি
-</footer>
+<script>
+function openLink(url){
+    window.open(url, '_blank');
+}
+</script>
 
 </body>
 </html>
