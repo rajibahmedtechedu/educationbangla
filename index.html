@@ -1,91 +1,103 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+}
 
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>রিসোর্স | সরকারি চাকরি প্রস্তুতি</title>
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #0f2a44;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+}
 
-    <style>
-        body{
-            margin:0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(180deg,#0f2027,#203a43,#2c5364);
-            color:#fff;
-        }
-        h1{
-            text-align:center;
-            padding:20px 10px;
-        }
-        .container{
-            max-width:600px;
-            margin:auto;
-            padding:10px;
-        }
-        .card{
-            background:rgba(255,255,255,0.1);
-            border-radius:15px;
-            padding:30px 20px;
-            margin:20px 0;
-            text-align:center;
-        }
-        .card h2{
-            margin-bottom:15px;
-        }
-        .card a{
-            text-decoration:none;
-            color:#ffd369;
-            font-weight:bold;
-            font-size:18px;
-        }
-        .card a:hover{
-            text-decoration:underline;
-        }
-        footer{
-            text-align:center;
-            font-size:14px;
-            padding:20px;
-            opacity:0.8;
-        }
-    </style>
-</head>
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+.logo span {
+  color: #2ecc71;
+}
 
-<body>
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-<h1>রিসোর্স</h1>
+.login-btn {
+  background: #2ecc71;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
 
-<div class="container">
+/* ===== HERO ===== */
+.hero {
+  background: #102b46;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
 
-    <div class="card">
-        <h2>নতুন প্রশ্ন সমাধান</h2>
-        <a href="mcq.html">MCQ দেখুন →</a>
-    </div>
+.hero h1 {
+  font-size: 48px;
+}
 
-    <div class="card">
-        <h2>প্রশ্ন ব্যাংক</h2>
-        <a href="question-bank.html">বিগত বছরের প্রশ্ন →</a>
-    </div>
+.tagline {
+  color: #3bd3ff;
+  margin-top: 10px;
+}
 
-    <div class="card">
-        <h2>ফ্রি PDF</h2>
-        <a href="pdf.html">ডাউনলোড →</a>
-    </div>
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 40px;
+}
 
-    <div class="card">
-        <h2>সিলেবাস ও গাইড</h2>
-        <a href="syllabus.html">প্রস্তুতি নিন →</a>
-    </div>
+.stat h2 {
+  color: #3bd3ff;
+}
 
-    <div class="card">
-        <h2>সরকারি চাকরির নোটিশ</h2>
-        <a href="notice.html">নতুন আপডেট →</a>
-    </div>
+/* ===== FEATURES ===== */
+.features {
+  padding: 60px 40px;
+  text-align: center;
+}
 
-</div>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
 
-<footer>
-    © 2025 | সরকারি চাকরি প্রস্তুতি | All Rights Reserved
-</footer>
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
 
-</body>
-</html>
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.purple { color: #9b59b6; }
+.green { color: #2ecc71; }
+.orange { color: #e67e22; }
+.blue { color: #3498db; }
+.red { color: #e74c3c; }
