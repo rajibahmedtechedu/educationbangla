@@ -1,94 +1,172 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>স্মার্ট ফিচার</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Satt Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b1e33;
+      color: #ffffff;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+      background: #0f2742;
+      padding: 14px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .menu {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #22c55e;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .icon {
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .signin {
+      background: #16a34a;
+      padding: 6px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      text-align: center;
+      padding: 70px 15px;
+    }
+
+    .hero h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 22px;
+      font-weight: normal;
+    }
+
+    .hero .blue {
+      color: #38bdf8;
+    }
+
+    .hero .green {
+      color: #22c55e;
+    }
+
+    /* ================= STATS ================= */
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      padding: 30px 10px;
+      flex-wrap: wrap;
+    }
+
+    .stat-box {
+      margin: 10px;
+    }
+
+    .stat-box img {
+      width: 50px;
+      margin-bottom: 8px;
+    }
+
+    .stat-box h3 {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .stat-box p {
+      font-size: 14px;
+      color: #9ca3af;
+    }
+
+  </style>
 </head>
 <body>
 
-<section class="smart-section">
-  <h1 class="section-title">স্মার্ট ফিচার</h1>
-
-  <div class="feature-grid">
-
-    <div class="feature-card purple">
-      <span class="badge">New</span>
-      <div class="icon purple-bg">💻</div>
-      <div class="content">
-        <h3>টেক || প্রোগ্রামিং</h3>
-        <p>স্কিল ডেভেলপমেন্ট সেকশন</p>
-      </div>
+  <!-- HEADER -->
+  <header>
+    <div class="header-left">
+      <div class="menu">☰</div>
+      <div class="logo"><span>Satt</span> Academy</div>
     </div>
 
-    <div class="feature-card green">
-      <div class="icon green-bg">👩‍🎓</div>
-      <div class="content">
-        <h3>১ম–দ্বাদশ শ্রেণি</h3>
-        <p>স্কুল এবং কলেজ বিভাগ</p>
-      </div>
+    <div class="header-right">
+      <div class="icon">🌙</div>
+      <div class="icon">🔍</div>
+      <a href="#" class="signin">Sign In</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Satt Academy</h1>
+    <h2>
+      <span class="blue">One Stop</span>
+      <span class="green">Learning Platform</span>
+    </h2>
+  </section>
+
+  <!-- STATS SECTION -->
+  <section class="stats">
+    <div class="stat-box">
+      <h3>2M+</h3>
+      <p>Questions</p>
     </div>
 
-    <div class="feature-card orange">
-      <div class="icon orange-bg">🏛️</div>
-      <div class="content">
-        <h3>ভর্তি প্রস্তুতি</h3>
-        <p>বিশ্ববিদ্যালয় ভর্তি পূর্ণ সমাধান</p>
-      </div>
+    <div class="stat-box">
+      <h3>6M+</h3>
+      <p>Students</p>
     </div>
 
-    <div class="feature-card darkgreen">
-      <div class="icon darkgreen-bg">📍</div>
-      <div class="content">
-        <h3>চাকরি প্রস্তুতি</h3>
-        <p>চাকরি পরীক্ষার পূর্ণ সমাধান</p>
-      </div>
+    <div class="stat-box">
+      <h3>100K+</h3>
+      <p>Contents</p>
     </div>
-
-    <div class="feature-card blue">
-      <span class="badge">New</span>
-      <div class="icon blue-bg">🛡️</div>
-      <div class="content">
-        <h3>প্যাটার্ন হাব</h3>
-        <p>প্যাটার্ন এনালাইসিস</p>
-      </div>
-    </div>
-
-    <div class="feature-card sky">
-      <div class="icon sky-bg">🎥</div>
-      <div class="content">
-        <h3>কোর্স</h3>
-        <p>কোর্স কালেকশন</p>
-      </div>
-    </div>
-
-    <div class="feature-card gray">
-      <span class="badge">New</span>
-      <div class="icon gray-bg">🧮</div>
-      <div class="content">
-        <h3>E-Question Builder</h3>
-        <p>এক ক্লিকে প্রশ্ন তৈরি করুন</p>
-      </div>
-    </div>
-
-    <div class="feature-card green">
-      <div class="icon green-bg">📝</div>
-      <div class="content">
-        <h3>এক্সাম বোর্ড</h3>
-        <p>ক্যাটাগরি ও বিষয়ভিত্তিক মডেল টেস্ট</p>
-      </div>
-    </div>
-
-    <div class="feature-card red">
-      <div class="icon red-bg">📚</div>
-      <div class="content">
-        <h3>বই</h3>
-        <p>বই কালেকশন</p>
-      </div>
-    </div>
-
-  </div>
-</section>
+  </section>
 
 </body>
 </html>
