@@ -3,20 +3,54 @@
 <head>
 <title>Bangladesh Job Circular 2025 | Govt, Private, Bank, NGO Jobs</title>
 
-<meta name="description" content="Bangladesh Job Circular 2025. Latest Government, Private, Bank and NGO Job Circular with Apply Links.">
-
+<meta name="description" content="Bangladesh Job Circular 2025. Latest Government, Private, Bank and NGO Job Circular.">
 <meta name="keywords" content="Bangladesh job circular, govt job, private job, bank job, ngo job">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body{margin:0;font-family:Arial}
 header{background:#006a4e;color:#fff;text-align:center;padding:20px}
-nav{background:#ffd800;padding:10px;text-align:center}
-nav a{margin:0 12px;text-decoration:none;font-weight:bold;color:#000}
-section{padding:20px}
-.job a{display:block;padding:6px 0;color:#006a4e;text-decoration:none}
-.job a:hover{text-decoration:underline}
+
+/* NAV BAR */
+nav{background:#ffd800;display:flex;justify-content:center}
+.menu{position:relative}
+.menu>a{
+  display:block;
+  padding:12px 20px;
+  text-decoration:none;
+  font-weight:bold;
+  color:#000
+}
+
+/* DROPDOWN */
+.dropdown{
+  display:none;
+  position:absolute;
+  top:45px;
+  left:0;
+  background:#fff;
+  min-width:260px;
+  box-shadow:0 4px 10px rgba(0,0,0,.2);
+  z-index:1000
+}
+.dropdown a{
+  display:block;
+  padding:10px;
+  text-decoration:none;
+  color:#006a4e;
+  border-bottom:1px solid #eee;
+  font-size:14px
+}
+.dropdown a:hover{
+  background:#f2f2f2
+}
+
+/* SHOW ON HOVER */
+.menu:hover .dropdown{
+  display:block
+}
+
+section{padding:25px}
 </style>
 </head>
 
@@ -28,32 +62,52 @@ section{padding:20px}
 </header>
 
 <nav>
+
+<!-- GOVT -->
+<div class="menu">
 <a href="https://bdgovt.info/category/govt-job/" target="_blank">Govt Jobs</a>
+<div class="dropdown">
+<a href="https://bdgovt.info/category/govt-job/" target="_blank">🔹 Primary Teacher Job Circular</a>
+<a href="https://bdgovt.info/category/govt-job/" target="_blank">🔹 Ministry Job Circular</a>
+<a href="https://bdgovt.info/category/govt-job/" target="_blank">🔹 Police & Defense Job</a>
+</div>
+</div>
+
+<!-- PRIVATE -->
+<div class="menu">
 <a href="https://bdgovt.info/category/private-job/" target="_blank">Private Jobs</a>
+<div class="dropdown">
+<a href="https://bdgovt.info/category/private-job/" target="_blank">🔹 Walton Group Job</a>
+<a href="https://bdgovt.info/category/private-job/" target="_blank">🔹 Beximco Job Circular</a>
+<a href="https://bdgovt.info/category/private-job/" target="_blank">🔹 IT Company Jobs</a>
+</div>
+</div>
+
+<!-- BANK -->
+<div class="menu">
 <a href="https://bdgovt.info/category/bank-job/" target="_blank">Bank Jobs</a>
+<div class="dropdown">
+<a href="https://bdgovt.info/category/bank-job/" target="_blank">🔹 Sonali Bank Job</a>
+<a href="https://bdgovt.info/category/bank-job/" target="_blank">🔹 Islami Bank Job</a>
+<a href="https://bdgovt.info/category/bank-job/" target="_blank">🔹 Private Bank Jobs</a>
+</div>
+</div>
+
+<!-- NGO -->
+<div class="menu">
 <a href="https://bdgovt.info/category/ngo-job/" target="_blank">NGO Jobs</a>
+<div class="dropdown">
+<a href="https://bdgovt.info/category/ngo-job/" target="_blank">🔹 BRAC Job Circular</a>
+<a href="https://bdgovt.info/category/ngo-job/" target="_blank">🔹 ASA NGO Job</a>
+<a href="https://bdgovt.info/category/ngo-job/" target="_blank">🔹 NGO Field Officer</a>
+</div>
+</div>
+
 </nav>
 
 <section>
-<h2>Latest Job Circular Bangladesh</h2>
-
-<div class="job">
-<a href="https://bdgovt.info/category/govt-job/" target="_blank">
-👉 Government Job Circular – View & Apply
-</a>
-
-<a href="https://bdgovt.info/category/private-job/" target="_blank">
-👉 Private Job Circular – View & Apply
-</a>
-
-<a href="https://bdgovt.info/category/bank-job/" target="_blank">
-👉 Bank Job Circular – View & Apply
-</a>
-
-<a href="https://bdgovt.info/category/ngo-job/" target="_blank">
-👉 NGO Job Circular – View & Apply
-</a>
-</div>
+<h2>Welcome to Bangladesh Job Circular Portal</h2>
+<p>Hover on menu to see latest job updates.</p>
 </section>
 
 </body>
