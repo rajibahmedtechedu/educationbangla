@@ -1,59 +1,194 @@
-body {
-  font-family: Arial;
-  background: #f4f6f8;
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-  background: #006a4e;
-  color: white;
-  text-align: center;
-  padding: 20px;
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #f4f7fb;
+  color: #222;
 }
 
-nav {
-  background: #004c3f;
-  padding: 10px;
-  text-align: center;
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  background: #0f2a44;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 36px;
 }
 
-nav a {
-  color: white;
-  margin: 10px;
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+.logo span {
+  color: #2ecc71;
+}
+
+.navbar nav a {
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-}
-.breaking {
-  background: #ffeb3b;
-  padding: 10px;
-  font-weight: bold;
-  color: #000;
+  margin: 0 12px;
+  font-size: 14px;
+  position: relative;
 }
 
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #2ecc71;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+.login-btn {
+  background: #2ecc71;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  background: linear-gradient(135deg, #0f2a44, #143d63);
+  color: #fff;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.tagline {
+  color: #3bd3ff;
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 50px;
+}
+
+.stat h2 {
+  font-size: 34px;
+  color: #3bd3ff;
+}
+
+.stat p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* =========================
+   FEATURES SECTION
+========================= */
+.features {
+  padding: 70px 40px;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #0f2a44;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
 
 .card {
-  background: white;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 8px;
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: 0.35s ease;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
 }
 
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
-.search-box {
-  text-align: center;
-  margin: 20px;
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
 }
 
-.search-box input {
-  width: 80%;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+.card h3 {
+  margin-top: 18px;
+  font-size: 20px;
 }
 
+.card p {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #555;
+}
+
+/* =========================
+   ICON STYLES
+========================= */
+.icon {
+  font-size: 38px;
+}
+
+.purple { color: #8e44ad; }
+.green  { color: #27ae60; }
+.orange { color: #e67e22; }
+.blue   { color: #3498db; }
+.red    { color: #e74c3c; }
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .stats {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .navbar nav {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .features {
+    padding: 50px 20px;
+  }
+}
