@@ -4,123 +4,146 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BD Job Circular News | Government, Private & NGO Jobs Bangladesh</title>
+<title>BD Job Circular News | Latest Jobs Bangladesh</title>
 
-<meta name="description" content="BD Job Circular News – Latest Bangladesh Government, Private, Bank & NGO Job Circular updates.">
+<meta name="description" content="BD Job Circular News – Latest Bangladesh Government, Private & NGO Job Circular Updates.">
 <meta name="keywords" content="bd job circular news, govt job bd, private job bd, ngo job bd">
-
 <meta name="google-site-verification" content="google90284e4798abd4a3">
 
 <style>
+*{box-sizing:border-box}
 body{
     margin:0;
-    font-family: Arial, sans-serif;
-    background:#f4f6f8;
-    position: relative;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background:#0a0f1c;
+    color:#fff;
+    overflow-x:hidden;
 }
 
 /* 🔹 Background Government Logo */
 body::before{
     content:"";
     position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:url("https://upload.wikimedia.org/wikipedia/commons/5/55/Government_Seal_of_Bangladesh.svg") no-repeat center;
-    background-size:300px;
-    opacity:0.05;
+    inset:0;
+    background:url("https://upload.wikimedia.org/wikipedia/commons/5/55/Government_Seal_of_Bangladesh.svg")
+    no-repeat center;
+    background-size:350px;
+    opacity:0.06;
     z-index:-1;
+    filter:blur(1px);
 }
 
+/* 🔹 Header */
 header{
-    background:#0b5ed7;
-    color:#fff;
     text-align:center;
-    padding:20px;
+    padding:70px 20px 40px;
+}
+header h1{
+    font-size:42px;
+    margin:0;
+    animation:fadeUp 1.5s ease;
+}
+header p{
+    opacity:.85;
+    font-size:18px;
+    animation:fadeUp 2s ease;
 }
 
-/* 🔹 Moving Text */
-.marquee{
-    background:#fff3cd;
-    color:#000;
-    padding:10px;
-    font-weight:bold;
+/* 🔹 Moving News Ticker */
+.ticker{
+    background:linear-gradient(90deg,#0b5ed7,#6610f2);
     overflow:hidden;
     white-space:nowrap;
+    padding:12px 0;
 }
-.marquee span{
+.ticker span{
     display:inline-block;
     padding-left:100%;
-    animation:scroll 15s linear infinite;
+    animation:scroll 18s linear infinite;
+    font-weight:bold;
 }
 @keyframes scroll{
-    0%{transform:translateX(0);}
-    100%{transform:translateX(-100%);}
+    0%{transform:translateX(0)}
+    100%{transform:translateX(-100%)}
 }
 
+/* 🔹 Menu */
 .menu{
     display:flex;
     justify-content:center;
-    gap:20px;
-    margin:30px 0;
+    gap:30px;
+    margin:80px 0;
+    flex-wrap:wrap;
 }
 
-.menu-item{
-    background:#fff;
-    padding:15px 25px;
-    font-weight:bold;
-    cursor:pointer;
-    border-radius:5px;
-    box-shadow:0 2px 6px rgba(0,0,0,.1);
+.card{
+    width:260px;
+    padding:25px;
+    background:rgba(255,255,255,.05);
+    border-radius:15px;
+    text-align:center;
     position:relative;
+    backdrop-filter:blur(10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+    transition:.4s;
+    cursor:pointer;
+    animation:fadeUp 2.5s ease;
+}
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+    background:rgba(255,255,255,.1);
 }
 
-.menu-item:hover{
-    background:#0b5ed7;
-    color:#fff;
+.card h2{
+    margin:0;
+    font-size:24px;
 }
 
 /* 🔹 Hover Details */
 .details{
-    display:none;
     position:absolute;
-    top:60px;
-    left:0;
+    left:50%;
+    top:110%;
+    transform:translateX(-50%);
     width:260px;
-    background:#fff;
-    color:#000;
-    padding:15px;
-    border-radius:5px;
-    box-shadow:0 5px 10px rgba(0,0,0,.2);
-    z-index:10;
+    background:#111;
+    padding:20px;
+    border-radius:15px;
+    opacity:0;
+    pointer-events:none;
+    transition:.4s;
+    box-shadow:0 20px 40px rgba(0,0,0,.6);
 }
-
-.menu-item:hover .details{
-    display:block;
+.card:hover .details{
+    opacity:1;
+    top:105%;
+    pointer-events:auto;
 }
 
 .details a{
-    color:#0b5ed7;
+    color:#0d6efd;
     text-decoration:none;
     font-weight:bold;
 }
 
-.container{
-    text-align:center;
-    padding-bottom:50px;
-}
-
+/* 🔹 Footer */
 footer{
-    background:#222;
-    color:#ccc;
     text-align:center;
-    padding:15px;
+    padding:30px 15px;
+    background:#060a14;
     font-size:14px;
+    opacity:.8;
 }
 footer a{
     color:#fff;
     text-decoration:none;
+    margin:0 5px;
+}
+
+/* 🔹 Animations */
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px)}
+    to{opacity:1; transform:translateY(0)}
 }
 </style>
 </head>
@@ -129,51 +152,46 @@ footer a{
 
 <header>
     <h1>BD Job Circular News</h1>
-    <p>Latest Government, Private & NGO Jobs in Bangladesh</p>
+    <p>Government • Private • NGO Jobs in Bangladesh</p>
 </header>
 
-<!-- 🔹 Moving Job News -->
-<div class="marquee">
-    <span>🔥 সর্বশেষ চাকরির বিজ্ঞপ্তি: সরকারি, বেসরকারি, ব্যাংক ও এনজিও নিয়োগ চলমান — বিস্তারিত দেখুন নিচে 🔥</span>
+<div class="ticker">
+    <span>🔥 সর্বশেষ চাকরির বিজ্ঞপ্তি চলমান — সরকারি, বেসরকারি, ব্যাংক ও এনজিও নিয়োগ আপডেট এখনই দেখুন 🔥</span>
 </div>
 
-<div class="container">
+<div class="menu">
 
-    <div class="menu">
-
-        <div class="menu-item">
-            সরকারি চাকরি
-            <div class="details">
-                চলমান সরকারি নিয়োগ বিজ্ঞপ্তি<br><br>
-                <a href="https://bdgovt.info/category/govt-job/" target="_blank">সব সরকারি চাকরি দেখুন →</a>
-            </div>
+    <div class="card">
+        <h2>সরকারি চাকরি</h2>
+        <div class="details">
+            চলমান সরকারি নিয়োগ বিজ্ঞপ্তি<br><br>
+            <a href="https://bdgovt.info/category/govt-job/" target="_blank">সব দেখুন →</a>
         </div>
+    </div>
 
-        <div class="menu-item">
-            বেসরকারি চাকরি
-            <div class="details">
-                নতুন প্রাইভেট কোম্পানির চাকরি<br><br>
-                <a href="https://bdgovt.info/category/private-job/" target="_blank">সব বেসরকারি চাকরি →</a>
-            </div>
+    <div class="card">
+        <h2>বেসরকারি চাকরি</h2>
+        <div class="details">
+            নতুন প্রাইভেট কোম্পানির চাকরি<br><br>
+            <a href="https://bdgovt.info/category/private-job/" target="_blank">সব দেখুন →</a>
         </div>
+    </div>
 
-        <div class="menu-item">
-            এনজিও চাকরি
-            <div class="details">
-                দেশি ও আন্তর্জাতিক NGO নিয়োগ<br><br>
-                <a href="https://bdgovt.info/category/ngo-job/" target="_blank">সব NGO চাকরি →</a>
-            </div>
+    <div class="card">
+        <h2>এনজিও চাকরি</h2>
+        <div class="details">
+            দেশি ও আন্তর্জাতিক NGO নিয়োগ<br><br>
+            <a href="https://bdgovt.info/category/ngo-job/" target="_blank">সব দেখুন →</a>
         </div>
-
     </div>
 
 </div>
 
 <footer>
-    <a href="about.html">About</a> |
-    <a href="privacy.html">Privacy Policy</a> |
-    <a href="contact.html">Contact</a><br><br>
-    © 2025 BD Job Circular News
+<a href="about.html">About</a> |
+<a href="privacy.html">Privacy Policy</a> |
+<a href="contact.html">Contact</a><br><br>
+© 2025 BD Job Circular News
 </footer>
 
 </body>
