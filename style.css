@@ -1,158 +1,198 @@
-/* ======================
-   GLOBAL RESET
-====================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
+
+/* ====== Google Font ====== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
 }
 
-body {
-  background: #f4f7fb;
-  color: #222;
+/* ====== Body ====== */
+body{
+    background:#0f172a;
+    color:#ffffff;
 }
 
-/* ======================
-   HEADER / TITLE
-====================== */
-.page-title {
-  text-align: center;
-  padding: 40px 0 20px;
+/* ====== Header ====== */
+header{
+    width:100%;
+    background:#0b1e3a;
+    padding:12px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-.page-title h1 {
-  font-size: 36px;
-  color: #1fae3b;
-  border-bottom: 3px solid #1fae3b;
-  display: inline-block;
-  padding-bottom: 6px;
+/* Logo */
+.logo{
+    font-size:22px;
+    font-weight:700;
+    color:#22c55e;
 }
 
-/* ======================
-   CARD GRID
-====================== */
-.cards {
-  width: 90%;
-  max-width: 1200px;
-  margin: 30px auto 60px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 25px;
+/* Menu icon */
+.menu{
+    font-size:24px;
+    color:#22c55e;
+    cursor:pointer;
 }
 
-/* ======================
-   CARD DESIGN
-====================== */
-.card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 22px 20px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  position: relative;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  transition: 0.3s ease;
-  cursor: pointer;
+/* Right icons */
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+.search-icon,
+.theme-icon{
+    font-size:20px;
+    cursor:pointer;
+    color:#e5e7eb;
 }
 
-/* ======================
-   LEFT COLOR BAR
-====================== */
-.card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 6px;
-  border-radius: 8px 0 0 8px;
-  background: #22c55e;
+/* Sign in button */
+.signin-btn{
+    background:#22c55e;
+    color:#ffffff;
+    padding:6px 14px;
+    border-radius:8px;
+    font-size:14px;
+    text-decoration:none;
+    font-weight:600;
 }
 
-/* ======================
-   ICON
-====================== */
-.card-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 26px;
-  flex-shrink: 0;
+/* ====== Hero Section ====== */
+.hero{
+    text-align:center;
+    padding:60px 20px 50px;
+    background:linear-gradient(180deg,#0b1e3a,#0f172a);
 }
 
-/* Different icon colors */
-.icon-purple { background: #7c3aed; }
-.icon-green  { background: #16a34a; }
-.icon-red    { background: #dc2626; }
-.icon-blue   { background: #2563eb; }
-.icon-cyan   { background: #0891b2; }
-.icon-orange { background: #ea580c; }
-
-/* ======================
-   CARD TEXT
-====================== */
-.card-content h3 {
-  font-size: 20px;
-  margin-bottom: 6px;
-  color: #111;
+.hero h1{
+    font-size:30px;
+    font-weight:700;
+    margin-bottom:10px;
 }
 
-.card-content p {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.4;
+.hero h1 span{
+    color:#22c55e;
 }
 
-/* ======================
-   NEW BADGE
-====================== */
-.badge {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background: #ff3d00;
-  color: #fff;
-  font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 20px;
-  border: 2px solid #fff;
+.hero p{
+    font-size:18px;
+    color:#38bdf8;
+    margin-bottom:40px;
 }
 
-/* ======================
-   FOOTER
-====================== */
-.footer {
-  background: #0f172a;
-  color: #cbd5e1;
-  text-align: center;
-  padding: 15px 10px;
-  font-size: 14px;
+/* Stats */
+.stats{
+    display:flex;
+    justify-content:space-around;
+    gap:10px;
 }
 
-/* ======================
-   RESPONSIVE
-====================== */
-@media (max-width: 600px) {
-  .page-title h1 {
-    font-size: 28px;
-  }
+.stat-box h2{
+    font-size:26px;
+    font-weight:700;
+}
 
-  .card {
-    padding: 18px;
-  }
+.stat-box p{
+    font-size:14px;
+    color:#38bdf8;
+}
 
-  .card-content h3 {
-    font-size: 18px;
-  }
+/* ====== Category Section ====== */
+.category-section{
+    padding:25px 15px 60px;
+}
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+/* Category Card */
+.category{
+    background:#020617;
+    border-radius:14px;
+    padding:30px 10px;
+    text-align:center;
+    position:relative;
+    box-shadow:0 6px 20px rgba(0,0,0,0.4);
+    font-size:15px;
+}
+
+/* Color lines */
+.category::before{
+    content:'';
+    position:absolute;
+    left:0;
+    top:0;
+    width:4px;
+    height:100%;
+    border-radius:14px 0 0 14px;
+    background:#22c55e;
+}
+
+/* Different colors */
+.category.blue::before{ background:#3b82f6; }
+.category.yellow::before{ background:#eab308; }
+.category.purple::before{ background:#a855f7; }
+.category.red::before{ background:#ef4444; }
+.category.green::before{ background:#22c55e; }
+
+/* New badge */
+.badge{
+    position:absolute;
+    top:-10px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#22c55e;
+    color:#ffffff;
+    font-size:12px;
+    padding:3px 10px;
+    border-radius:20px;
+    border:3px solid #020617;
+}
+
+/* ====== Floating Button ====== */
+.floating-btn{
+    position:fixed;
+    bottom:25px;
+    right:20px;
+    width:55px;
+    height:55px;
+    background:#22c55e;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    color:#ffffff;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+    cursor:pointer;
+}
+
+/* ====== Responsive ====== */
+@media(max-width:768px){
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:480px){
+    .categories{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:24px;
+    }
 }
