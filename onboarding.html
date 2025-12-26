@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>User Onboarding</title>
+    <link rel="stylesheet" href="onboarding.css">
+</head>
+<body>
+
+<div class="onboard-container">
+
+    <h2>আপনার লক্ষ্য নির্বাচন করুন</h2>
+    <p class="subtitle">আমাদের আপনার জন্য সেরা কনটেন্ট সাজাতে সাহায্য করুন</p>
+
+    <div class="progress">
+        <div class="bar" id="bar"></div>
+    </div>
+
+    <div class="options">
+        <div class="card" onclick="selectCard(this)">📚 ভর্তি প্রস্তুতি</div>
+        <div class="card" onclick="selectCard(this)">💼 চাকরি প্রস্তুতি</div>
+        <div class="card" onclick="selectCard(this)">💻 স্কিল / কোর্স</div>
+        <div class="card" onclick="selectCard(this)">🏫 স্কুল / কলেজ</div>
+    </div>
+
+    <div class="buttons">
+        <button class="btn next" onclick="nextStep()">Next</button>
+    </div>
+
+</div>
+
+<script src="onboarding.js"></script>
+</body>
+</html>
