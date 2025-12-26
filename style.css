@@ -1,6 +1,4 @@
-/* =========================
-   GLOBAL RESET
-========================= */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -8,187 +6,103 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  background: #f4f7fb;
+  background: #f3f6fb;
+  font-family: Arial, sans-serif;
   color: #222;
 }
 
-/* =========================
-   NAVBAR
-========================= */
-.navbar {
-  background: #0f2a44;
-  color: #fff;
+/* ===== HEADER ===== */
+.top {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.top h1 {
+  font-size: 32px;
+  color: #1a8f2f;
+  border-bottom: 3px solid #1a8f2f;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+/* ===== FEATURES ===== */
+.features {
+  padding: 40px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+/* ===== CARD ===== */
+.feature-card {
+  background: #fff;
+  border-radius: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 14px 36px;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: 700;
-}
-.logo span {
-  color: #2ecc71;
-}
-
-.navbar nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 12px;
-  font-size: 14px;
-  position: relative;
-}
-
-.navbar nav a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: #2ecc71;
-  left: 0;
-  bottom: -4px;
-  transition: 0.3s;
-}
-
-.navbar nav a:hover::after {
-  width: 100%;
-}
-
-.login-btn {
-  background: #2ecc71;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  color: #fff;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-/* =========================
-   HERO SECTION
-========================= */
-.hero {
-  background: linear-gradient(135deg, #0f2a44, #143d63);
-  color: #fff;
-  text-align: center;
-  padding: 90px 20px;
-}
-
-.hero h1 {
-  font-size: 52px;
-  font-weight: 700;
-}
-
-.tagline {
-  color: #3bd3ff;
-  margin-top: 12px;
-  font-size: 18px;
-}
-
-.stats {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  margin-top: 50px;
-}
-
-.stat h2 {
-  font-size: 34px;
-  color: #3bd3ff;
-}
-
-.stat p {
-  font-size: 14px;
-  opacity: 0.85;
-}
-
-/* =========================
-   FEATURES SECTION
-========================= */
-.features {
-  padding: 70px 40px;
-  text-align: center;
-}
-
-.features h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-  color: #0f2a44;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-.card {
-  background: #fff;
-  padding: 35px 30px;
-  border-radius: 16px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-  transition: 0.35s ease;
+  padding: 22px;
   text-decoration: none;
   color: inherit;
   position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+.feature-card:hover {
+  transform: translateY(-6px);
 }
 
-.card h3 {
-  margin-top: 18px;
-  font-size: 20px;
+/* ===== ICON ===== */
+.icon {
+  font-size: 34px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-right: 16px;
+  color: #fff;
 }
 
-.card p {
-  font-size: 14px;
-  margin-top: 8px;
+/* ===== TEXT ===== */
+.text h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.text p {
+  font-size: 13px;
   color: #555;
 }
 
-/* =========================
-   ICON STYLES
-========================= */
-.icon {
-  font-size: 38px;
+/* ===== BADGE ===== */
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: #fff;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 20px;
 }
 
-.purple { color: #8e44ad; }
-.green  { color: #27ae60; }
-.orange { color: #e67e22; }
-.blue   { color: #3498db; }
-.red    { color: #e74c3c; }
+/* ===== COLORS ===== */
+.purple { background: #8e44ad; }
+.green { background: #27ae60; }
+.orange { background: #e67e22; }
+.blue { background: #3498db; }
+.darkgreen { background: #16a085; }
+.sky { background: #1abc9c; }
+.gray { background: #7f8c8d; }
+.red { background: #e74c3c; }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 900px) {
-  .stats {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .navbar nav {
-    display: none;
-  }
-}
-
+/* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-
   .features {
-    padding: 50px 20px;
+    padding: 20px;
   }
 }
