@@ -8,7 +8,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{margin:0;font-family:Arial}
+body{
+margin:0;
+font-family:Arial;
+background-image:url('logo.png');
+background-repeat:no-repeat;
+background-position:center;
+background-size:400px;
+background-attachment:fixed;
+}
+
+/* overlay effect */
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.9);
+z-index:-1;
+}
 
 /* HEADER */
 header{
@@ -85,7 +105,6 @@ section{padding:25px}
 <p>Govt | Private | Bank | NGO Jobs</p>
 </header>
 
-<!-- LIVE RUNNING LINE -->
 <div class="ticker">
 <span>
 🔥 Primary Teacher Job Circular | Sonali Bank Job | BRAC NGO Job | Walton Group Job | Apply Now
@@ -97,36 +116,36 @@ section{padding:25px}
 <div class="menu">
 <a href="https://bdgovt.info/category/govt-job/" target="_blank">Govt Jobs</a>
 <div class="dropdown">
-<a href="https://bdgovt.info/category/govt-job/" target="_blank">Primary Teacher Job</a>
-<a href="https://bdgovt.info/category/govt-job/" target="_blank">Ministry Job Circular</a>
-<a href="https://bdgovt.info/category/govt-job/" target="_blank">Defense Job</a>
+<a href="#">Primary Teacher Job</a>
+<a href="#">Ministry Job Circular</a>
+<a href="#">Defense Job</a>
 </div>
 </div>
 
 <div class="menu">
 <a href="https://bdgovt.info/category/private-job/" target="_blank">Private Jobs</a>
 <div class="dropdown">
-<a href="https://bdgovt.info/category/private-job/" target="_blank">Walton Group Job</a>
-<a href="https://bdgovt.info/category/private-job/" target="_blank">Beximco Job</a>
-<a href="https://bdgovt.info/category/private-job/" target="_blank">IT Company Job</a>
+<a href="#">Walton Group Job</a>
+<a href="#">Beximco Job</a>
+<a href="#">IT Company Job</a>
 </div>
 </div>
 
 <div class="menu">
 <a href="https://bdgovt.info/category/bank-job/" target="_blank">Bank Jobs</a>
 <div class="dropdown">
-<a href="https://bdgovt.info/category/bank-job/" target="_blank">Sonali Bank Job</a>
-<a href="https://bdgovt.info/category/bank-job/" target="_blank">Islami Bank Job</a>
-<a href="https://bdgovt.info/category/bank-job/" target="_blank">Private Bank Job</a>
+<a href="#">Sonali Bank Job</a>
+<a href="#">Islami Bank Job</a>
+<a href="#">Private Bank Job</a>
 </div>
 </div>
 
 <div class="menu">
 <a href="https://bdgovt.info/category/ngo-job/" target="_blank">NGO Jobs</a>
 <div class="dropdown">
-<a href="https://bdgovt.info/category/ngo-job/" target="_blank">BRAC Job</a>
-<a href="https://bdgovt.info/category/ngo-job/" target="_blank">ASA Job</a>
-<a href="https://bdgovt.info/category/ngo-job/" target="_blank">Field Officer Job</a>
+<a href="#">BRAC Job</a>
+<a href="#">ASA Job</a>
+<a href="#">Field Officer Job</a>
 </div>
 </div>
 
@@ -134,7 +153,7 @@ section{padding:25px}
 
 <section>
 <h2>Bangladesh Latest Job Updates</h2>
-<p>Hover on menu to see running job circulars.</p>
+<p>Official job circular portal style layout.</p>
 </section>
 
 </body>
